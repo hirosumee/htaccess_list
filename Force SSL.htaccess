@@ -1,0 +1,5 @@
+## Force HTTPS by SSL installation
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+## Force HTTPS by SSL installation ends
