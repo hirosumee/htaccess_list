@@ -1,0 +1,6 @@
+# Allow access from specific countries
+RewriteCond %{ENV:GEOIP_COUNTRY_CODE} ^(VN|SG|US|HK|JP)$
+RewriteRule ^ - [L]
+
+# Block all other countries
+RewriteRule ^ - [F,L]
